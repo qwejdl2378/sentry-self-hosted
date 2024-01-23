@@ -29,6 +29,7 @@ fi
 
 # A couple of the config files are referenced from other subscripts, so they
 # get vars, while multiple subscripts call ensure_file_from_example.
+# 声明函数 后面用来创建默认配置
 function ensure_file_from_example {
   target="$1"
   if [[ -f "$target" ]]; then

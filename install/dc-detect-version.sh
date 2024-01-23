@@ -9,6 +9,7 @@ fi
 echo "${_group}Initializing Docker Compose ..."
 
 # To support users that are symlinking to docker-compose
+# 声明 docker-compose 的简写
 dc_base="$(docker compose version &>/dev/null && echo 'docker compose' || echo 'docker-compose')"
 if [[ "$(basename $0)" = "install.sh" ]]; then
   dc="$dc_base --ansi never --env-file ${_ENV}"
